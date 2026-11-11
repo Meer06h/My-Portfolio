@@ -17,7 +17,6 @@ export default function Footer() {
 
   return (
     <footer id="footer" className="site-footer">
-
       <div className="mx-auto w-[90%] max-w-site">
 
         {/* Top line */}
@@ -33,7 +32,6 @@ export default function Footer() {
 
         {/* Main closing statement */}
         <div className="footer-main">
-
           <div className="footer-message">
             <p className="mv-eyebrow footer-kicker">
               THANKS FOR MAKING IT THIS FAR
@@ -70,7 +68,7 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Oversized wordmark */}
+          {/* Oversized wordmark — intentionally remains MEER */}
           <Motion.div
             initial={
               reduceMotion ? false : { opacity: 0, scale: 0.96 }
@@ -90,12 +88,11 @@ export default function Footer() {
 
         {/* Navigation and social links */}
         <div className="footer-middle">
-
           <div className="footer-brand-note">
             <span className="footer-brand-icon">M.</span>
 
             <div>
-              <strong>MEER</strong>
+              <strong>MEER HUMAYU</strong>
               <p>Software Engineer & AI Developer</p>
             </div>
           </div>
@@ -128,12 +125,10 @@ export default function Footer() {
               Get in touch ↗
             </a>
           </div>
-
         </div>
 
         {/* Copyright strip */}
         <div className="footer-bottom">
-
           <p>
             © {year} MEER. ALL RIGHTS RESERVED.
           </p>
@@ -145,9 +140,7 @@ export default function Footer() {
           <a href="#home" className="footer-back-top">
             BACK TO TOP <span>↑</span>
           </a>
-
         </div>
-
       </div>
     </footer>
   );

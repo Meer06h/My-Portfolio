@@ -17,9 +17,10 @@ export default function Header() {
       <div className="mv-container flex items-center justify-between py-7">
         <a
           href="#home"
-          className="font-display text-2xl font-semibold tracking-[0.18em]"
+          aria-label="Meer Humayu - Home"
+          className="font-display text-2xl font-semibold tracking-[0.12em]"
         >
-          MEER<span className="text-brass">.</span>
+          MEER HUMAYU<span className="text-brass">.</span>
         </a>
 
         <nav className="hidden items-center gap-9 md:flex">
