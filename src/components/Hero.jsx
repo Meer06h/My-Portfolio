@@ -32,7 +32,8 @@ const scenes = [
 ];
 
 export default function Hero() {
-  const [scene, setScene] = useState(0);
+  // Night theme is the default when the website opens.
+  const [scene, setScene] = useState(2);
   const reduceMotion = useReducedMotion();
 
   const active = scenes[scene];
@@ -196,7 +197,7 @@ export default function Hero() {
             }
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.35 }}
-            className="absolute left-0 top-[21%] z-20 hidden w-[min(290px,25vw)] flex-col gap-5 lg:flex"
+            className="absolute left-0 top-[12%] z-20 hidden w-[min(290px,25vw)] flex-col gap-5 lg:flex"
           >
             <p className="mv-eyebrow opacity-60">
               SOFTWARE ENGINEER / AI DEVELOPER
@@ -238,7 +239,7 @@ export default function Hero() {
             }
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
-            className="absolute right-0 top-[23%] z-20 hidden text-right sm:block"
+            className="absolute right-0 top-[13%] z-20 hidden text-right sm:block"
           >
             <p className="mv-eyebrow opacity-60">
               CURRENT FOCUS
