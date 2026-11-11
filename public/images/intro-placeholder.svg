@@ -1,0 +1,47 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9DCCB"/>
+      <stop offset="1" stop-color="#998777"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9D795E"/>
+      <stop offset="1" stop-color="#574233"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#wall)"/>
+
+  <rect x="45" y="65" width="290" height="400" fill="#F3E9DA"/>
+  <rect x="65" y="85" width="250" height="360" fill="#D2C5B4"/>
+  <path d="M65 350 L315 150 L315 445 L65 445Z" fill="#A99A88" opacity=".35"/>
+
+  <rect x="365" y="180" width="365" height="290" rx="8" fill="#292723"/>
+  <rect x="380" y="196" width="335" height="248" fill="#171817"/>
+
+  <g fill="#C7A17A">
+    <rect x="405" y="222" width="120" height="7" rx="3"/>
+    <rect x="405" y="248" width="235" height="5" rx="2"/>
+    <rect x="405" y="269" width="190" height="5" rx="2"/>
+    <rect x="405" y="290" width="265" height="5" rx="2"/>
+    <rect x="405" y="311" width="145" height="5" rx="2"/>
+    <rect x="405" y="332" width="225" height="5" rx="2"/>
+    <rect x="405" y="353" width="175" height="5" rx="2"/>
+  </g>
+
+  <rect x="340" y="470" width="410" height="25" fill="#292723"/>
+  <rect x="0" y="650" width="800" height="350" fill="url(#desk)"/>
+
+  <path d="M130 650 L690 650 L740 710 L85 710Z" fill="#D3B89C"/>
+
+  <rect x="275" y="575" width="250" height="12" rx="4" fill="#40372F"/>
+  <rect x="320" y="585" width="160" height="70" rx="7" fill="#3C3730"/>
+
+  <ellipse cx="650" cy="770" rx="65" ry="25" fill="#49382C"/>
+  <path d="M595 730 L705 730 L695 805 Q650 845 605 805Z" fill="#D0A887"/>
+  <path d="M704 745 Q765 735 740 785" fill="none" stroke="#D0A887" stroke-width="13"/>
+
+  <path d="M55 720 Q110 670 135 750 L150 900 L40 900Z" fill="#5C5842"/>
+  <path d="M100 740 Q150 650 165 735" stroke="#7F8A66" stroke-width="12" fill="none"/>
+</svg>

@@ -1,0 +1,263 @@
+
+.intro-highlight {
+  position: relative;
+  z-index: 0;
+  display: inline;
+  padding-inline: 0.06em;
+  margin-inline: -0.06em;
+}
+
+.intro-highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0.06em 0 0.02em;
+  z-index: -1;
+  background: var(--mv-brass);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.75s steps(8, end) 0.3s;
+}
+
+.intro-highlight.is-revealed::before {
+  clip-path: inset(0 0 0 0);
+}
+
+/* The photographic developing tray */
+.intro-tray {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 9% 9% 11%;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    #302923,
+    #171311 70%
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.1),
+    inset 0 18px 30px -18px rgba(255,255,255,0.2),
+    0 40px 60px -30px rgba(20,18,16,0.55);
+}
+
+.intro-bath {
+  position: absolute;
+  inset: 5.5%;
+  overflow: hidden;
+  border-radius: 6px;
+  background:
+    radial-gradient(
+      120% 90% at 50% 20%,
+      #4c4035,
+      #171311
+    );
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.08),
+    inset 0 10px 24px rgba(0,0,0,0.5);
+}
+
+.intro-sheen {
+  position: absolute;
+  inset: -30%;
+  background: repeating-linear-gradient(
+    172deg,
+    transparent 0 22px,
+    rgba(255,255,255,0.035) 22px 24px,
+    transparent 24px 46px
+  );
+  animation: intro-ripple 9s linear infinite;
+}
+
+@keyframes intro-ripple {
+  to {
+    transform: translateY(46px);
+  }
+}
+
+/* The print */
+.intro-print {
+  position: relative;
+  z-index: 1;
+  padding: 3.4%;
+  background: #fff;
+  border-radius: 4px;
+  rotate: -1.4deg;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.3),
+    0 18px 30px -16px rgba(0,0,0,0.6);
+}
+
+.intro-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+  background: #302923;
+}
+
+.intro-photo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.intro-negative {
+  filter: invert(1) grayscale(0.4) contrast(1.15);
+}
+
+.intro-positive {
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    #000 var(--dev-start),
+    transparent var(--dev-line)
+  );
+  mask-image: linear-gradient(
+    180deg,
+    #000 var(--dev-start),
+    transparent var(--dev-line)
+  );
+}
+
+/* Red safelight wash */
+.intro-safe {
+  position: absolute;
+  inset: 0;
+  background: #e3261b;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Developing line */
+.intro-wave {
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  height: 64px;
+  translate: 0 -50%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255,241,218,0.1) 38%,
+    rgba(255,255,255,0.42) 50%,
+    rgba(255,241,218,0.1) 62%,
+    transparent
+  );
+  filter: blur(1.5px);
+  pointer-events: none;
+}
+
+.intro-wave::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: rgba(255,255,255,0.55);
+}
+
+/* Hover reflection */
+.intro-glint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255,241,218,0) 38%,
+    rgba(255,241,218,0.55) 50%,
+    transparent 70%
+  );
+  translate: -120% 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.intro-print:hover .intro-glint {
+  translate: 120% 0;
+  transition: translate 1.2s cubic-bezier(0.3,0.6,0.2,1);
+}
+
+/* Safelight lamp */
+.intro-lamp {
+  position: absolute;
+  z-index: 3;
+  right: 5.5%;
+  top: 2%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 22px;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.intro-lamp-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+/* Tray glow */
+.intro-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    90% 70% at 85% 0%,
+    rgba(255,60,40,0.55),
+    rgba(255,40,30,0.12) 55%,
+    transparent 80%
+  );
+  mix-blend-mode: screen;
+}
+
+/* Print caption and progress */
+.intro-caption {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  overflow: hidden;
+  padding: 13px 12px 15px;
+  background: rgba(20,18,16,0.04);
+  box-shadow: inset 0 0 0 1px var(--mv-fog);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.09em;
+}
+
+.intro-caption strong {
+  display: inline-block;
+  min-width: 4ch;
+  text-align: right;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.intro-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--mv-brass);
+  transform: scaleX(var(--dev));
+  transform-origin: 0 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-sheen {
+    animation: none;
+  }
+
+  .intro-highlight::before {
+    transition: none;
+  }
+}
