@@ -1,0 +1,81 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--mv-bone);
+  color: var(--mv-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--mv-brass);
+  color: var(--mv-ink);
+}
+
+#root {
+  min-height: 100vh;
+  overflow: clip;
+}
+
+/* Reusable layout */
+@layer components {
+  .mv-container {
+    @apply mx-auto w-[92%];
+    max-width: var(--content-width);
+  }
+
+  .mv-eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em];
+  }
+
+  .mv-section {
+    @apply relative py-24 md:py-32 lg:py-40;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

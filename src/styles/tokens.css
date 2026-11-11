@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;500&family=Mona+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Colors */
+  --mv-bone: #F1ECE4;
+  --mv-ink: #141210;
+  --mv-brass: #FF5B2E;
+  --mv-pine: #231D19;
+  --mv-fog: #DDD4C8;
+  --mv-stone: #857B70;
+  --mv-cloud: #FFFFFF;
+  --mv-night: #171311;
+
+  /* Typography */
+  --font-display: "Mona Sans", sans-serif;
+  --font-body: "Mona Sans", sans-serif;
+  --font-mono: "Chivo Mono", monospace;
+
+  /* Layout */
+  --page-gutter: clamp(20px, 5vw, 76px);
+  --content-width: 1520px;
+  --section-space: clamp(80px, 11vw, 170px);
+
+  /* Animation */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-normal: 700ms;
+}

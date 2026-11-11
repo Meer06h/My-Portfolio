@@ -1,0 +1,39 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1000">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#51443A"/>
+      <stop offset="1" stop-color="#211D1A"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D8BDA6"/>
+      <stop offset="1" stop-color="#A98268"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Transparent background: only the portrait silhouette is drawn -->
+  <path d="M65 1000 Q65 790 115 680 Q160 585 250 565
+    L250 490 L350 490 L350 565
+    Q440 585 485 680 Q535 790 535 1000Z"
+    fill="url(#body)"/>
+
+  <path d="M230 370 Q220 280 245 220
+    Q270 160 330 175 Q405 190 410 290
+    Q415 390 350 445 Q300 480 250 430Z"
+    fill="url(#skin)"/>
+
+  <path d="M225 310 Q195 190 280 125
+    Q370 75 425 190 Q450 245 420 330
+    L395 265 Q340 245 280 275
+    L245 355Z"
+    fill="#29231F"/>
+
+  <path d="M250 445 Q300 480 350 445
+    L365 565 Q300 610 235 565Z"
+    fill="#B68E74"/>
+
+  <path d="M65 1000 Q90 790 185 700
+    Q235 655 300 650 Q365 655 415 700
+    Q510 790 535 1000Z"
+    fill="url(#body)"/>
+</svg>
