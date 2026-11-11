@@ -1,0 +1,73 @@
+
+export const projects = [
+  {
+    id: "kaamgar",
+    number: "01",
+    name: "Kaamgar",
+    mark: "K",
+    category: "PLATFORM · FULL-STACK",
+    period: "IN DEVELOPMENT",
+    role: "Product concept · Platform architecture",
+    description:
+      "A cooperative gig-services platform focused on verifiable digital work histories for informal workers and stronger local service communities.",
+    outcome: "A work-history-first service ecosystem",
+    stack: ["React", "Tailwind CSS", "Node.js", "PostgreSQL", "FastAPI"],
+    visual: "kaamgar",
+  },
+  {
+    id: "heritage",
+    number: "02",
+    name: "Heritage",
+    mark: "H",
+    category: "HACKATHON · WEB EXPERIENCE",
+    period: "HACKATHON PROJECT",
+    role: "Frontend · Landing page",
+    description:
+      "A heritage-focused web experience exploring immersive storytelling and visual presentation around historic places.",
+    outcome: "Interactive heritage discovery",
+    stack: ["React", "Vite", "Tailwind CSS", "3D Canvas"],
+    visual: "heritage",
+  },
+  {
+    id: "synapse",
+    number: "03",
+    name: "Synapse",
+    mark: "S",
+    category: "AI · LEARNING EXPERIENCE",
+    period: "CONCEPT / PROTOTYPE",
+    role: "AI architecture · RAG experimentation",
+    description:
+      "An empathetic AI study-partner concept using retrieval-augmented generation to support contextual and more useful learning.",
+    outcome: "Context-aware AI study assistance",
+    stack: ["Python", "FastAPI", "LangChain", "Chroma", "RAG"],
+    visual: "synapse",
+  },
+  {
+    id: "real-estate",
+    number: "04",
+    name: "Real Estate",
+    mark: "R",
+    category: "JAVA · DESKTOP APPLICATION",
+    period: "ACADEMIC PROJECT",
+    role: "Java application development",
+    description:
+      "A desktop management application developed around real-estate records and property-management workflows.",
+    outcome: "Structured desktop management",
+    stack: ["Java", "Java Swing", "MySQL"],
+    visual: "property",
+  },
+  {
+    id: "expense-manager",
+    number: "05",
+    name: "Expense Manager",
+    mark: "E",
+    category: "JAVA · DESKTOP APPLICATION",
+    period: "ACADEMIC PROJECT",
+    role: "Application development",
+    description:
+      "A Java desktop application for recording and organizing personal expense information.",
+    outcome: "Organized expense tracking",
+    stack: ["Java", "Java Swing", "MySQL"],
+    visual: "expense",
+  },
+];
