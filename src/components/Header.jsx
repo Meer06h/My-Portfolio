@@ -4,6 +4,7 @@ import { useState } from "react";
 const links = [
   ["Work", "#work"],
   ["About", "#about"],
+  ["Resume", "#resume"],
   ["Services", "#services"],
   ["Process", "#process"],
   ["Contact", "#contact"],
@@ -23,7 +24,7 @@ export default function Header() {
           MEER HUMAYU<span className="text-brass">.</span>
         </a>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {links.map(([label, href]) => (
             <a
               key={label}
@@ -47,14 +48,14 @@ export default function Header() {
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label="Toggle navigation"
-          className="border border-current/30 px-4 py-2 md:hidden"
+          className="border border-current/30 px-4 py-2 lg:hidden"
         >
           {open ? "CLOSE ×" : "MENU +"}
         </button>
       </div>
 
       {open && (
-        <nav className="mx-5 flex flex-col gap-6 border border-ink/10 bg-bone p-7 text-ink md:hidden">
+        <nav className="mx-5 flex flex-col gap-6 border border-ink/10 bg-bone p-7 text-ink lg:hidden">
           {links.map(([label, href]) => (
             <a
               key={label}
@@ -65,6 +66,14 @@ export default function Header() {
               {label}
             </a>
           ))}
+
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="font-mono text-xs uppercase tracking-widest"
+          >
+            Let's talk ↗
+          </a>
         </nav>
       )}
     </header>
